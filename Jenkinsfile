@@ -6,7 +6,7 @@ node{
 	}
 	
 	stage('test'){
-		myGradleContainer.inside("-v $(env.HOME)/ .gradle:/home/gradle"){
+		myGradleContainer.inside("-v ${env.HOME}/ .gradle:/home/gradle"){
 			echo "test passed"
 		}
 	}
