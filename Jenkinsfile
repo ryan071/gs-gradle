@@ -1,5 +1,5 @@
 node{
-	def myGradleContainer = docker.image('gradle:Java SE Development kit 8u221')
+	def myGradleContainer = docker.image('gradle:jdk8-alphine')
 	myGradleContainer.pull()
 	stage('prep'){
 		checkout scm
