@@ -6,14 +6,10 @@ node{
 	}
 	
 	stage('test'){
-		myGradleContainer.inside("-v /var/jenkins_home/jenkins/ .gradle:/home/gradle"){
+		myGradleContainer.inside("-v ./var/jenkins_home/jenkins/workspace .gradle:/home/gradle"){
 			echo "test passed"
 		}
 	}
 	
-	stage('run'){
-		myGradleContainer.inside("-v ${env.HOME}/ .gradle:/home/gradle"){
-			
-		}
-	}
+	
 }
